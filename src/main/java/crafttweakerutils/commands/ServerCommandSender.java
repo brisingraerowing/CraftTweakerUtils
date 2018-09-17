@@ -1,4 +1,4 @@
-package crafttweakerutils;
+package crafttweakerutils.commands;
 
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.api.command.ICommandSender;

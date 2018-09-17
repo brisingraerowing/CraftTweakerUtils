@@ -1,11 +1,11 @@
-package crafttweakerutils;
+package crafttweakerutils.utils;
 
 import crafttweaker.annotations.*;
 import stanhebben.zenscript.annotations.*;
 
 
 @ZenRegister
-@ZenClass("mods.ctutils.Math")
+@ZenClass("mods.ctutils.utils.Math")
 public class Math {
 
 	@ZenMethod
