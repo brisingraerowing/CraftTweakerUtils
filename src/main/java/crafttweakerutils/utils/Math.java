@@ -153,6 +153,21 @@ public class Math {
 	}
 
 	@ZenMethod
-	public static double random() { return java.lang.Math.random(); }
+	public static double random()
+	{
+		return java.lang.Math.random();
+	}
+
+	@ZenMethod
+	public static int round(float f1)
+	{
+		return java.lang.Math.round(f1);
+	}
+
+	@ZenMethod
+	public static long round(double d1)
+	{
+		return java.lang.Math.round(d1);
+	}
 
 }
