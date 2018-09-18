@@ -1,6 +1,7 @@
 package crafttweakerutils.world;
 
 import net.minecraft.world.GameRules;
+import stanhebben.zenscript.ZenRuntimeException;
 
 public class MCGameRules implements IGameRules {
 
@@ -34,6 +35,30 @@ public class MCGameRules implements IGameRules {
 	@Override
 	public boolean hasRule(String name) {
 		return rules.hasRule(name);
+	}
+
+	@Override
+	public void addGameRule(String key, String value, String type) {
+		if(hasRule(key)) return;
+
+		GameRules.ValueType t = GameRules.ValueType.ANY_VALUE;
+
+		switch (type.toLowerCase())
+		{
+			case "any":
+				break;
+			case "numeric":
+				t = GameRules.ValueType.NUMERICAL_VALUE;
+				break;
+			case "boolean":
+				t = GameRules.ValueType.BOOLEAN_VALUE;
+				break;
+			default:
+				throw new ZenRuntimeException("Invalid value for gamerule type. Must be one of Any, Numeric, or Boolean");
+		}
+
+		rules.addGameRule(key, value, t);
+
 	}
 
 	@Override

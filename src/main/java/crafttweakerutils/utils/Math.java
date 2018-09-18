@@ -152,4 +152,7 @@ public class Math {
 		return java.lang.Math.sqrt(d1);
 	}
 
+	@ZenMethod
+	public static double random() { return java.lang.Math.random(); }
+
 }
