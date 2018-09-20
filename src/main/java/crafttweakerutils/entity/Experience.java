@@ -1,10 +1,9 @@
 package crafttweakerutils.entity;
 
 
-import crafttweaker.CraftTweakerAPI;
 import crafttweaker.annotations.ZenRegister;
+import crafttweaker.api.world.IBlockPos;
 import crafttweaker.api.world.IWorld;
-import net.minecraft.server.MinecraftServer;
 import stanhebben.zenscript.annotations.ZenClass;
 import crafttweaker.api.entity.IEntityXp;
 import crafttweaker.mc1120.entity.MCEntityXp;
@@ -29,6 +28,13 @@ public class Experience {
 	{
 		EntityXPOrb orb = (EntityXPOrb)xp.getInternal();
 		orb.xpValue = value;
+	}
+
+	@ZenMethod
+	public static void spawnEntityXp(IWorld world, int value, IBlockPos pos)
+	{
+		IEntityXp xp = createEntityXp(world, value);
+		xp.getDefinition().spawnEntity(world, pos);
 	}
 
 }

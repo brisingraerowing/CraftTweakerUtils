@@ -1,11 +1,9 @@
 package crafttweakerutils.world;
 
 import crafttweaker.annotations.ZenRegister;
-import crafttweaker.api.block.IBlock;
 import crafttweaker.api.entity.IEntity;
 import crafttweaker.api.world.IBlockPos;
 import crafttweaker.api.world.IWorld;
-import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;

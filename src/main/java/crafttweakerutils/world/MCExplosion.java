@@ -1,6 +1,5 @@
 package crafttweakerutils.world;
 
-import crafttweaker.api.block.IBlock;
 import crafttweaker.api.entity.IEntityLivingBase;
 import crafttweaker.api.world.IBlockPos;
 import crafttweaker.api.world.IVector3d;
@@ -8,7 +7,6 @@ import crafttweaker.mc1120.entity.MCEntityLivingBase;
 import crafttweaker.mc1120.world.MCBlockPos;
 import crafttweaker.mc1120.world.MCVector3d;
 import net.minecraft.world.Explosion;
-import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 import java.util.List;
