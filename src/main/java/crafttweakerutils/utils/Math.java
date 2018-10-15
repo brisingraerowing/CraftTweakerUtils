@@ -57,15 +57,15 @@ public class Math {
 	}
 
 	@ZenMethod
-	public static int floor(double d1)
+	public static long floor(double d1)
 	{
-		return new Double(java.lang.Math.floor(d1)).intValue();
+		return new Double(java.lang.Math.floor(d1)).longValue();
 	}
 
 	@ZenMethod
-	public static int ceil(double d1)
+	public static long ceil(double d1)
 	{
-		return new Double(java.lang.Math.ceil(d1)).intValue();
+		return new Double(java.lang.Math.ceil(d1)).longValue();
 	}
 
 	@ZenMethod
@@ -168,6 +168,30 @@ public class Math {
 	public static long round(double d1)
 	{
 		return java.lang.Math.round(d1);
+	}
+
+	@ZenMethod
+	public static double clamp(double value, double min, double max)
+	{
+		return (value < min) ? min : (value > max) ? max : value;
+	}
+
+	@ZenMethod
+	public static float clamp(float value, float min, float max)
+	{
+		return (value < min) ? min : (value > max) ? max : value;
+	}
+
+	@ZenMethod
+	public static int clamp(int value, int min, int max)
+	{
+		return (value < min) ? min : (value > max) ? max : value;
+	}
+
+	@ZenMethod
+	public static long clamp(long value, long min, long max)
+	{
+		return (value < min) ? min : (value > max) ? max : value;
 	}
 
 }
