@@ -4,13 +4,19 @@ import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.entity.IEntity;
 import crafttweaker.api.world.IBlockPos;
 import crafttweaker.api.world.IWorld;
+import crafttweakerutils.utils.IRandom;
+import crafttweakerutils.utils.RandomWrapper;
 import net.minecraft.util.math.BlockPos;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
+import stanhebben.zenscript.annotations.ZenExpansion;
 import net.minecraft.entity.Entity;
+
+
 
 @ZenRegister
 @ZenClass("mods.ctutils.world.World")
+@ZenExpansion(value = "crafttweaker.world.IWorld")
 public class World {
 
 	@ZenMethod
@@ -54,6 +60,13 @@ public class World {
 		net.minecraft.world.World w = (net.minecraft.world.World)world.getInternal();
 
 		return new MCExplosion(w.newExplosion((Entity)entity.getInternal(), x, y, z, strength, isFlaming, isSmoking));
+	}
+
+	@ZenMethod
+	public static IRandom getRandom(IWorld world)
+	{
+		net.minecraft.world.World w = (net.minecraft.world.World)world.getInternal();
+		return new RandomWrapper(w.rand);
 	}
 
 }

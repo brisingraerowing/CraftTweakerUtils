@@ -3,10 +3,18 @@ package crafttweakerutils.utils;
 import crafttweaker.annotations.*;
 import stanhebben.zenscript.annotations.*;
 
+import java.util.Random;
+
 
 @ZenRegister
 @ZenClass("mods.ctutils.utils.Math")
 public class Math {
+
+	static void test()
+	{
+		Random r = null;
+
+	}
 
 	@ZenMethod
 	public static double max(double d1, double d2)
@@ -194,4 +202,15 @@ public class Math {
 		return (value < min) ? min : (value > max) ? max : value;
 	}
 
+	@ZenMethod
+	public static IRandom getRandom()
+	{
+		return new RandomWrapper(new Random());
+	}
+
+	@ZenMethod
+	public static IRandom getRandom(long seed)
+	{
+		return new RandomWrapper(new Random(seed));
+	}
 }
