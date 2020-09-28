@@ -43,6 +43,11 @@ public class MCExplosion implements IExplosion {
 	}
 
 	@Override
+	public void clearAffectedBlockPositions() {
+		explosion.clearAffectedBlockPositions();
+	}
+
+	@Override
 	public Object getInternal() {
 		return explosion;
 	}

@@ -12,13 +12,19 @@ import stanhebben.zenscript.annotations.ZenMethod;
 public interface IExplosion {
 
 	@ZenMethod
+	@ZenGetter("PlacedBy")
 	IEntityLivingBase getExplosivePlacedBy();
 
 	@ZenMethod
+	@ZenGetter("placedBy")
 	IBlockPos[] getAffectedBlockPositions();
 
 	@ZenMethod
+	@ZenGetter("position")
 	IVector3d getPosition();
+
+    @ZenMethod
+    void clearAffectedBlockPositions();
 
 
 	Object getInternal();
