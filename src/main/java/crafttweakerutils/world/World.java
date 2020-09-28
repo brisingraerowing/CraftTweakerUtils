@@ -10,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 import stanhebben.zenscript.annotations.ZenExpansion;
+import stanhebben.zenscript.annotations.Optional;
 import net.minecraft.entity.Entity;
 
 
