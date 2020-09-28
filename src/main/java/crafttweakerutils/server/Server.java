@@ -8,8 +8,10 @@ import crafttweaker.mc1120.player.MCPlayer;
 import net.minecraft.server.MinecraftServer;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
+import stanhebben.zenscript.annotations.ZenExpansion;
 
 @ZenClass("mods.ctutils.server.Server")
+@ZenExpansion("crafttweaker.server.IServer")
 @ZenRegister
 public class Server {
 

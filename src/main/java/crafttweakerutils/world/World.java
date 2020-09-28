@@ -15,9 +15,9 @@ import net.minecraft.entity.Entity;
 
 
 
-@ZenRegister
 @ZenClass("mods.ctutils.world.World")
 @ZenExpansion("crafttweaker.world.IWorld")
+@ZenRegister
 public class World {
 
 	@ZenMethod
