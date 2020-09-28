@@ -16,7 +16,7 @@ import net.minecraft.entity.Entity;
 
 @ZenRegister
 @ZenClass("mods.ctutils.world.World")
-@ZenExpansion(value = "crafttweaker.world.IWorld")
+@ZenExpansion("crafttweaker.world.IWorld")
 public class World {
 
 	@ZenMethod
@@ -55,7 +55,7 @@ public class World {
 	}
 
 	@ZenMethod
-	public static IExplosion newExplosion(IWorld world, IEntity entity, double x, double y, double z, float strength, boolean isFlaming, boolean isSmoking)
+	public static IExplosion newExplosion(IWorld world, double x, double y, double z, float strength, @Optional boolean isFlaming, @Optional boolean isSmoking, @Optional IEntity entity)
 	{
 		net.minecraft.world.World w = (net.minecraft.world.World)world.getInternal();
 
