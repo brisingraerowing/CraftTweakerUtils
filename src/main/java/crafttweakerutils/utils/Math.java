@@ -213,4 +213,10 @@ public class Math {
 	{
 		return new RandomWrapper(new Random(seed));
 	}
+
+	@ZenMethod
+	public static double log(double input) { return java.lang.Math.log(input); }
+
+	@ZenMethod
+	public static double log10(double input) { return java.lang.Math.log10(input); }
 }
